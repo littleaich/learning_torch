@@ -14,7 +14,8 @@ Y: target labels -> N x K where N = #samples and K = #classes
 --]]
 
 --[[ Stochastic Gradient Descent (SGD) with single sample
-Remember, SGD in torch actually 
+Remember, SGD in torch actually updates the parameters for single sample.
+--]]
 for i = 1, N do
 	local pred = net:forward(X[i])
 	local err = loss:forward(pred, Y[i])
